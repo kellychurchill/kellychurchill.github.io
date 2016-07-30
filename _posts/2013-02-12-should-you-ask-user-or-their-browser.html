@@ -1,0 +1,23 @@
+---
+title: "Should You Ask The User Or Their Browser? - article summary"
+layout: "post"
+permalink: "/2013/02/should-you-ask-user-or-their-browser.html"
+uuid: "8755070609567047282"
+guid: "tag:blogger.com,1999:blog-8345338137923701921.post-8755070609567047282"
+date: "2013-02-12 02:47:00"
+updated: "2013-03-05 02:59:30"
+description: 
+blogger:
+    siteid: "8345338137923701921"
+    postid: "8755070609567047282"
+    comments: "0"
+categories: 
+author: 
+    name: "Kelly Churchill"
+    url: "https://plus.google.com/101662648613414147519?rel=author"
+    image: "//lh3.googleusercontent.com/-1483s6YQg-c/AAAAAAAAAAI/AAAAAAAACJs/uoCsRiVY6Es/s32-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+<a class="bbc_link" href="http://uxdesign.smashingmagazine.com/2013/02/04/remove-interface-elements/" target="_blank">http://uxdesign.smashingmagazine.com/2013/02/04/remove-interface-elements/</a><br /><br />We  can take away the burden of making the user tell us things that we can  use technical solutions to determine much in the same way that we can  detect mobile devices to redirect the user to a mobile website. <br /><br />Language, Country or Region, Timezone <br /><br />Lanuage:  The most common way of detecting the user’s language is with the  Accept-Language HTTP header. There is also a JavaScript property,  window.navigator.language, which serves a similar purpose, but may be  less reliable — particularly cross-browser. These methods rely on the  user set value in their OS. <br /><br />Country or Region: HTML5 geolocation  is a generally reliable way to get the user’s current location —  provided they are using a modern browser and opt in to providing it to  you.<br /><br />Timeazone:<br />JavaScript provides us with  Date.getTimezoneOffset(), which returns the difference between UTC and  the user’s local time in minutes.<br /><br /><br />Should We Ask The User?<br />When deciding whether user-facing interface element is needed for a particular setting, we can ask three questions:<br /><ul class="bbc_list" style="list-style-type: decimal;"><li>Can we make a confident determination using a technical solution?</li><li>Can we decide on an intelligent default?</li><li>What are the consequences of guessing wrong?</li></ul><br /><br />Case Study: UPS<br /><br />Before  you do anything on UPS’ website, you’re forced to pick your country and  language from a big ugly drop-down list. This means that before finding  a UPS Store location, tracking a package or scheduling a pickup, you’re  faced with a question — without any explanation whatsoever of why UPS  needs an answer.<br /><br /><br />HOW TO FIX IT<br /><br />For the country, we can  use IP-based geolocation. This technique is imprecise but generally  accurate, which is fine for our purposes: we’re looking for a country,  here, not a street address.<br /><br />The language would often be  determined by the country, particularly in the case of UPS (which offers  only a single language for most countries). In case the user’s locale  has multiple common languages, we could use the HTTP Accept-Language  header to default the user to their preferred language. Voila!<br /><br />Wrapping Up<br />Adding  more checkboxes, drop-down menus and radio buttons to a website is the  easiest thing in the world. The technical implementation is  straightforward, and the UX trade-offs are well defined. Putting in the  extra work to remove interface elements is sometimes thankless. But  creating experiences in which users are only asked relevant information  at relevant times makes for happy users, and happy users lead to happy  designers.
+</div>

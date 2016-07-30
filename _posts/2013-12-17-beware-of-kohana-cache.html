@@ -1,0 +1,23 @@
+---
+title: "Beware of the Kohana cache"
+layout: "post"
+permalink: "/2013/12/beware-of-kohana-cache.html"
+uuid: "5498652855968662043"
+guid: "tag:blogger.com,1999:blog-8345338137923701921.post-5498652855968662043"
+date: "2013-12-17 18:33:00"
+updated: "2014-02-07 18:34:46"
+description: 
+blogger:
+    siteid: "8345338137923701921"
+    postid: "5498652855968662043"
+    comments: "0"
+categories: 
+author: 
+    name: "Kelly Churchill"
+    url: "https://plus.google.com/101662648613414147519?rel=author"
+    image: "//lh3.googleusercontent.com/-1483s6YQg-c/AAAAAAAAAAI/AAAAAAAACJs/uoCsRiVY6Es/s32-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+Quite a few issues have arisen on a project during launch and since that can be attributed to the use of Kohana server caching. <br /><br />This  caching will frustrate a user who is trying to update  something in the CMS admin and because they are always viewing a server  cached version, they never see the updates on the front end. As a  result, caching is turning the page into a static as opposed to a  dynamic one. <br /><br />So, beware of this when working on Kohana sites.  Careful consideration needs to be given to the implementation and use  and benefit of server caching on a case by case basis. The only use that  I personally have identified as benefiting from server caching is a  for a search where the data is not dynamically updated.&nbsp; <br /><br />Of  course, if caching is determined to be useful on a site, there needs to  be cache deletion triggered any time the CMS user updates a  record. <br />
+</div>

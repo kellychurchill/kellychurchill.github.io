@@ -1,0 +1,23 @@
+---
+title: "20 Tips and Tricks Any MySQL Database Developer Should Consider "
+layout: "post"
+permalink: "/2013/08/20-tips-and-tricks-any-mysql-database.html"
+uuid: "5467310569958062238"
+guid: "tag:blogger.com,1999:blog-8345338137923701921.post-5467310569958062238"
+date: "2013-08-13 17:39:00"
+updated: "2014-02-07 18:40:09"
+description: 
+blogger:
+    siteid: "8345338137923701921"
+    postid: "5467310569958062238"
+    comments: "0"
+categories: 
+author: 
+    name: "Kelly Churchill"
+    url: "https://plus.google.com/101662648613414147519?rel=author"
+    image: "//lh3.googleusercontent.com/-1483s6YQg-c/AAAAAAAAAAI/AAAAAAAACJs/uoCsRiVY6Es/s32-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+<a class="bbc_link" href="http://www.onextrapixel.com/2013/08/02/20-tips-and-tricks-any-mysql-database-developer-should-consider/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+onextrapixel+%28Onextrapixel%29" target="_blank">20 Tips and Tricks Any MySQL Database Developer Should Consider</a><br /><br />1. Do not edit dump files - text editors can corrupt these files. <br /><br />2.  MyISAM block size - myisam_block_size has a default value of 1K which  can be too small to be optimal. With an adequate block size, the OS will  never have to write to they disc.<br /><br />3. Turning on delay_key_write -  Turning delay_key_write on ensures that the database will not flush the  MyISAM key after every single write which can save time for future  writes. <br /><br />4. Joins: Create same column types and don't forget to  index - Not using the same column type will result in MySQL trying to do  a full table scan<br /><br />5. Define WHERE clause with LIMIT 1 - When  looking for one row, the query will stop when finding the match instead  of the entire table.<br /><br />6. Adding EXPLAIN keyword to SELECT queries -  By adding the EXPLAIN keyword, MySQL will explain what your query is  doing and store the results in a table. <br /><br />7. Query Cache: Optimizing your queries - Query caching is usually enabled however CURDATE has this function disabled. <br /><br />8. Use stack trace to isolate bugs - <a class="bbc_link" href="http://www.skysql.com/blogs/adam-donnison/using-mysql-stack-trace-isolate-bugs" target="_blank">Follow Sky SQL's mini-tutorial on this</a><br /><br />9. Enums, set SQL_MODE to traditional<br /><br />10. MySQL changing root password to allow root acces can give you needed permission access<br /><br />11. Database backup using mysqldump command <br /><br />12. <a class="bbc_link" href="https://raw.github.com/major/MySQLTuner-perl/master/mysqltuner.pl" target="_blank">Fixing your config files using MySQL Tuner perl script</a><br /><br />13. Identify slow queries - enable slow-query-log functionality to identify slow running queries and save results to a log file<br /><br />14. Autoincrement: direct reset - sometimes the default settings are not needed<br /><br />15.  Partitioning MySQL tables - Use SHOW PLUGINS to determine if your  version supports partitioning. Partitioning can help manage large tables  of data <br /><br />16. Enums and SQL - enums can be tricky when migrating <br /><br />17.  "Store IP Address as unsigned int" - storing IP addresses allows MySQL  to store them as integer values to save money on storage costs<br /><br />18. Use your indexes to create tables - An index can be created while the table itself is being created <br /><br />19. Vertical partitioning - Can be used to structure your tables in a vertical manner <br /><br />20. Storage engines matter - Beginners or novices should start in MyISAM - InnoDB tends to be more complicated
+</div>

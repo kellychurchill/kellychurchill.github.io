@@ -1,0 +1,23 @@
+---
+title: "Player DOB uses"
+layout: "post"
+permalink: "/2012/11/player-dob-uses.html"
+uuid: "5532136851399468116"
+guid: "tag:blogger.com,1999:blog-8345338137923701921.post-5532136851399468116"
+date: "2012-11-22 03:31:00"
+updated: "2013-03-05 03:31:38"
+description: 
+blogger:
+    siteid: "8345338137923701921"
+    postid: "5532136851399468116"
+    comments: "0"
+categories: 
+author: 
+    name: "Kelly Churchill"
+    url: "https://plus.google.com/101662648613414147519?rel=author"
+    image: "//lh3.googleusercontent.com/-1483s6YQg-c/AAAAAAAAAAI/AAAAAAAACJs/uoCsRiVY6Es/s32-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+A client uses a player's age to restrict program registration. The  restriction is based on the player's age on the start date of the  division. <br /><br />In addition, on the front end, they display a list of  players' birthdays that occur in the current week.<br /><br />1) Age on date helper: <br /><br />Below is the  util::getAgeOnDate() helper to calculate an age based on a birthday and a  given date. This is useful in determining a player's qualifying age on  the start date of a program ($year_diff)&nbsp; as opposed to their current  age.<br /><br /><div class="codeheader"><br /></div><pre style="padding: 0px;"><code class="bbc_code">/**<br />&nbsp;* Calculate age based on birthdate and a given date.<br />&nbsp;* based on http://www.populate.it/age_on_date_php.html<br />&nbsp;* <br />&nbsp;* @param dob: format 'MM/DD/YYYY'<br />&nbsp;* @param date: format 'MM/DD/YYYY'<br />&nbsp;* @return array<br />&nbsp;*/<br />function getAgeOnDate($dob, $date) {<br /><br /> $birthdate = explode('/', $dob);<br /> $givendate = explode('/', $date);<br /> <br /> $year_diff&nbsp; &nbsp; = $givendate[2] - $birthdate[2];<br /> $month_diff = $givendate[0] - $birthdate[0];<br /> $day_diff&nbsp; &nbsp; &nbsp;= $givendate[1] - $birthdate[1];<br /> <br /> if ($day_diff &lt; 0) {<br />  $month_diff--;<br />  $day_diff = cal_days_in_month (CAL_GREGORIAN, $birthdate[0], $birthdate[2]) - (-1 * $day_diff);<br /> }<br /> <br /> if ($month_diff &lt; 0){<br />  $year_diff--;<br />  $month_diff = 12 - (-1 * $month_diff);<br /> }<br /> return array($year_diff, $month_diff, $day_diff);<br />}</code></pre><br />2) This Week's Birthdays:<br /><br />Below  is the method used to get a list of players whose age on the first day  of the week does not match their age on the last day of the week,  thereby indicating that their birthday falls within those 2 days. <br /><pre style="padding: 0px;"><code class="bbc_code">/**<br />&nbsp;* Return list of players birthdays this week.<br />&nbsp;* <br />&nbsp;* @param filters array of filters/sort flags applied to list<br />&nbsp;* @return array<br />&nbsp;*/<br />public function getThisWeekBirthdays($filters = array()) {<br /> // Init list<br /> $list&nbsp; &nbsp; &nbsp;= array();<br /> $today&nbsp; &nbsp; = date('l');<br /> $interval = '7';<br /> <br /> // Get the start date of the week<br /> if ($today == 'Monday') {<br />  $start_week = date('Y-m-d', strtotime("last Sunday midnight"));<br /> } else { <br />  $start_week = date('Y-m-d', strtotime("last Sunday"));<br /> }<br /> <br /> // Get list<br /> try {<br />  $sql = <br />   "SELECT<br />    p.id,<br />    p.fname,<br />    p.lname,<br />    p.dob<br />   FROM<br />    profiles p <br />    JOIN team_players tp ON tp.profile_id = p.id<br />   WHERE <br />    tp.roster_id = '" . mysql_real_escape_string($filters['id']) . "'<br />    AND FLOOR(DATEDIFF(DATE('" . $start_week . "'), dob) / 365.25) &lt;&gt; <br />FLOOR(DATEDIFF(DATE_ADD(DATE('" . $start_week . "'), INTERVAL " . $interval . " DAY), dob) / 365.25)<br />   ORDER BY<br />    p.lname ASC<br />  ";<br />  <br />  $res = $this-&gt;db-&gt;query($sql)-&gt;result(FALSE);<br />  foreach ($res as $row) {<br />   $list[$row['id']] = $row;<br />  }<br /> } catch (Kohana_Database_Exception $e) {<br />  Kohana::log('error', "{$e-&gt;getFile()}: {$e-&gt;getLine()}\n{$e-&gt;getMessage()}");<br /> }<br /> <br /> // Return<br /> return $list;<br />}</code></pre>&nbsp; <br /><br />
+</div>

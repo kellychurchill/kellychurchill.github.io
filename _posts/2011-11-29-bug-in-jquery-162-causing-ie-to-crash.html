@@ -1,0 +1,23 @@
+---
+title: "Bug in jQuery 1.6.2 causing IE to crash"
+layout: "post"
+permalink: "/2011/11/bug-in-jquery-162-causing-ie-to-crash.html"
+uuid: "683188165252842932"
+guid: "tag:blogger.com,1999:blog-8345338137923701921.post-683188165252842932"
+date: "2011-11-29 03:51:00"
+updated: "2013-03-05 03:51:41"
+description: 
+blogger:
+    siteid: "8345338137923701921"
+    postid: "683188165252842932"
+    comments: "0"
+categories: 
+author: 
+    name: "Kelly Churchill"
+    url: "https://plus.google.com/101662648613414147519?rel=author"
+    image: "//lh3.googleusercontent.com/-1483s6YQg-c/AAAAAAAAAAI/AAAAAAAACJs/uoCsRiVY6Es/s32-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+A client's site was crashing in IE8 causing the message "This tab has been recovered. A  problem with this webpage caused Internet Explorer to close and reopen  the tab."&nbsp; It turns out there is a bug with jQuery version 1.6.2 having  to do with CSS background images which was the culprit (<a class="bbc_link" href="http://bugs.jquery.com/ticket/9823" target="_blank">http://bugs.jquery.com/ticket/9823</a>)<br /><br />Simply  upgrading to the latest jQuery version solved the problem. Something to  be aware of for other sites using background images and jQuery 1.6.2.
+</div>

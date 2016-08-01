@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>{{ page.title }}l</title>
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
-		<nav role="navigation">
+		<nav class="navbar" role="navigation">
     		<ul>
         		<li><a href="/">Home</a></li>
 	        	<li><a href="/about">About</a></li>
@@ -17,9 +20,10 @@
 			{{ content }}
 		</main>
 		<footer role="contentinfo">
-    		<ul>
-        		<li><a href="https://github.com/kellychurchill">github.com/kellychurchill</a></li>
+    	<ul>
+        <li>Copyright &copy; 2016 | kellychurchill.com</li> 
 			</ul>
+
 		</footer>
 	</body>
 </html>

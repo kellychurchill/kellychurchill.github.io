@@ -1,0 +1,10 @@
+$font-stack:       Helvetica, sans-serif;
+$font-stack-code:  Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
+$font-size-base: 14px;
+
+body {
+  font-family: $font-stack;
+}
+code, pre {
+  font-family: $font-stack-code;
+}

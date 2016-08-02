@@ -3,10 +3,9 @@ layout: default
 title: Blog
 ---
 <h1>{{ page.title }}
-  {% for post in site.posts %}
-	    <div class="post">
-        <span>{{ post.date | date_to_long_string }}</span>
-        <div class="post-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
-      </div>
-  {% endfor %}
-
+{% for post in site.posts %}
+  <div class="post">
+    <span>{{ post.date | date_to_long_string }}</span>
+    <div class="post-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+  </div>
+{% endfor %}

@@ -3,3 +3,10 @@ layout: default
 title: Kelly Churchill
 ---
 <h1>Kelly Churchill</h1>
+{% for post in site.posts limit:1 %}
+<p class="meta">{{ post.date | date_to_long_string }}</p>
+    <h2>{{ post.title }}</h2>
+    <div class="post">
+    {{ post.content }}
+  </div>
+{% endfor %}

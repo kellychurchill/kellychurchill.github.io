@@ -10,10 +10,10 @@
 	<body>
 		<nav class="navbar" role="navigation">
     		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/resume">Resume</a></li>
-        		<li><a href="/blog">Blog</a></li>
+        		<li><a href="/" {% if page.page == 'home' %}class="active"{% endif %}>Home</a></li>
+	        	<li><a href="/about" {% if page.page == 'about' %}class="active"{% endif %}>About</a></li>
+        		<li><a href="/resume" {% if page.page == 'resume' %}class="active"{% endif %}>Resume</a></li>
+        		<li><a href="/blog" {% if page.page == 'blog' %}class="active"{% endif %}>Blog</a></li>
     		</ul>
 		</nav>
 		<main role="main">

@@ -1,3 +1,5 @@
 name: Kelly Churchill
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+collections:
+  presentations:
+    output: true

@@ -1,0 +1,12 @@
+---
+layout: default
+page: presentations
+title: Presentations
+---
+<h1>Presentations</h1>
+{% for presentation in site.presentations %}
+  <div class="post">
+    <span>{{ presentation.event }} </span>
+    <div class="post-title"><a href="{{ presentation.url }}" title="{{ presentation.title }}">{{ presentation.title }}</a></div>
+  </div>
+{% endfor %} 

@@ -1,17 +1,31 @@
 ---
-# this ensures Jekyll reads the file to be transformed into CSS later
-# only Main files contain this front matter, not partials.
 ---
-@import "colors";
-@import "typography";
+@import "../_sass/_colors.scss";
+@import "../_sass/_typography.scss";
 
 body {
-    margin: 60px auto;
-    width: 70%;
+  margin: 60px auto;
+  width: 70%;
+	font-size: 1.5em;
+	line-height: 1.4em;
+	color: #333;
 }
 code, pre {
   // color: $green;
 }
+a {
+	text-decoration: none;
+	color: $teal;
+	text-decoration: underline;
+}
+a:hover {
+	color: $teal;
+}
+a.active {
+	color: $teal;
+	text-decoration: underline;
+}
+
 nav ul, footer ul {
 	padding: 0px;
 	list-style: none;
@@ -20,13 +34,10 @@ nav ul, footer ul {
 nav ul li, footer ul li {
 	display: inline;
 	margin-right: 20px;
-}
-a {
-	text-decoration: none;
-	color: $grey;
-}
-a:hover {
-	color: $teal;
+	a {
+		color: $grey;
+		text-decoration: none;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,26 +51,17 @@ h2 { font-size: 2.6rem; line-height: 1.25; letter-spacing: -.1rem; }
 h3 { font-size: 2.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
 h4 { font-size: 1.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 
-p {
-	font-size: 1.5em;
-	line-height: 1.4em;
-	color: #333;
-}
+
 footer {
 	border-top: 1px solid #d5d5d5;
 	font-size: .8em;
 }
 
-ul.posts { 
-	margin: 20px auto 40px; 
-	font-size: 0.8em;
-}
 .post  {
 	margin: 20px auto 40px; 
-	font-size: 0.8em;
 }
 .post-title {
-	font-size: 1.0em;
+	font-size: 1.2em;
 }
 .container {
 	max-width: 800px;

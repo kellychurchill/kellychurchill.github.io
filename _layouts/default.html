@@ -4,7 +4,7 @@
 		<title>{{ page.title }}</title>
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="/css/skeleton.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
@@ -22,7 +22,9 @@
 		</main>
 		<footer role="contentinfo">
     	<ul>
-        <li>Copyright &copy; 2017 | kellychurchill.com</li> 
+        <li>Copyright &copy; 2017 | kellychurchill.com</li><li><i class="fa fa-pencil fa-lg fa-fw"></i><a href="{{ site.github_repo }}/edit/{{ site.github_branch | default: 'gh-pages' }}/{{ page.path }}">
+            Edit This Page
+          </a></li>
 			</ul>
 
 		</footer>

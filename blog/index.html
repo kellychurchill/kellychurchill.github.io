@@ -4,6 +4,7 @@ page: blog
 title: Blog
 ---
 <h1>{{ page.title }}</h1>
+<p>Follow me on <i class="fa fa-medium fa-lg fa-fw"></i> <a href="https://medium.com/@kellymchurchill/" target="_blank">medium.com/@kellymchurchill</a></p>
 {% for post in site.posts %}
   <div class="post">
     <span>{{ post.date | date_to_long_string }}</span>

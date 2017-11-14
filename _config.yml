@@ -3,3 +3,5 @@ markdown: kramdown
 collections:
   presentations:
     output: true
+github_repo: https://github.com/kellychurchill/kellychurchill.github.io
+github_branch: master

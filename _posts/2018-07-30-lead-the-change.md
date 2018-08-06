@@ -57,7 +57,7 @@ Every IBMer now has access to GitHub Enterprise as a result of Sam and Kevin pus
 
 Also now available to all IBMers is Slack, which was first introduced by Sam and Kevin in September 2014. In <a href="https://medium.com/design-ibm/listen-to-the-wild-ducks-how-ibm-adopted-slack-2bcfd3732680#.5ujkqlfa0" target="_blank">Listen to the Wild Ducks: How IBM adopted Slack — by Bill Higgins</a>, you can learn more about the story of how they created the first Slack team which was a key factor in facilitating collaboration and conversation when creating the FED@IBM mission and community. Slack is now widely used across IBM.
 
-If you think you can't make changes at work, take a look at the resources below and read John Kotter's Leading Change, which is a guide to business transformation. If a few people can change the way a 100 year old company with 20,000 products and 400,000 products works, transformation at any company is possible.
+If you think you can't make changes at work, take a look at the resources below and read John Kotter's Leading Change, which is a guide to business transformation. If a few people can change the way a 100 year old company with 20,000 products and 400,000 people works, transformation at any company is possible.
 
 Now, I am not saying that we have completely transformed and solved all of the challenges at IBM — we are still working through many of them. But maybe after reading this, you will be inspired to lead some changes that result in impact at your company.
 

@@ -42,6 +42,7 @@ or services to others. NPS has become a widely-adopted measurement so these
 scores can be quickly understood.
 
 ![](https://cdn-images-1.medium.com/max/800/1*Gr6BLsIpJH7OcPEXUqvaIw.png)
+
 <span class="figcaption_hack">NPS scores for front-end developers in the previous IBM Design on-boarding program.</span>
 
 While responses would have been very different for designers responding to this
@@ -136,12 +137,10 @@ FED track and their managers. I was astonished at the huge jump in their
 ratings:
 
 ![](https://cdn-images-1.medium.com/max/800/1*LeWOEqVskHfB9HltVfa4vA.png)
+
 <span class="figcaption_hack">NPS scores for front-end developers in the prototyped FED track in IBM Design on-boarding program.</span>
 
-Based on the responses of the front-end developers who participated in the
-prototype, they rated the experience overall at an NPS Score of 33 — a jump of
-75. Managers of those developers rated the preparedness of their developers had
-an even larger jump — responding with an NPS Score of 50, a jump of 125!
+Based on the responses of the front-end developers who participated in the prototype, they rated the experience overall at an NPS Score of 33  - a jump of 75. Managers of those developers rated the preparedness of their developers had an even larger jump — responding with an NPS Score of 50, a jump of 125!
 
 In support of their ratings, they said:
 
@@ -190,3 +189,6 @@ to focus on the “thinking” part. After all, design thinking is a way of solv
 problems and is a technique that *anyone* can learn and use to achieve better
 outcomes for their users.
 
+*****
+
+#### Published on [Design at IBM](https://medium.com/design-ibm?source=footer_card)
